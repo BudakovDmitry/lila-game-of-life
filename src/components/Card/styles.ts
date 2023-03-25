@@ -51,20 +51,20 @@ export const CardBackground = styled.div`
     }
 `
 
-export const Card = styled.div`
-    position: relative;
-    width: 380px;
-    height: 450px;
-    padding: 20px 40px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    z-index: 1;
-    transform: 0.5s;
-    color: #fff;
-    text-align: center;
-`
+// export const Card = styled.div`
+//     position: relative;
+//     width: 380px;
+//     height: 450px;
+//     padding: 20px 40px;
+//     background: rgba(255, 255, 255, 0.05);
+//     backdrop-filter: blur(10px);
+//     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+//     border-radius: 8px;
+//     z-index: 1;
+//     transform: 0.5s;
+//     color: #fff;
+//     text-align: center;
+// `
 
 export const CardTitle = styled.h2`
     margin-bottom: 20px;
@@ -77,4 +77,14 @@ export const CardDescription = styled.p`
 
 export const CloseCardButton = styled.button`
     height: 80px;
+`
+
+
+export const CardContainer = styled.div`
+    max-width: 350px;
+`
+
+export const Card = styled.img`
+    max-width: 350px;
+    box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.75);
 `

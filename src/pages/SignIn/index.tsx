@@ -14,6 +14,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles'
 import Copyright from 'src/components/Copyright'
 import { useSignIn } from 'src/pages/SignIn/useSignIn'
 
+const Image = require('src/images/card-back.jpg')
 const theme = createTheme()
 
 const SignIn = () => {
@@ -27,9 +28,9 @@ const SignIn = () => {
           item
           xs={false}
           sm={4}
-          md={7}
+          md={5}
           sx={{
-            backgroundImage: 'url(https://source.unsplash.com/random)',
+            backgroundImage: `url(${Image})`,
             backgroundRepeat: 'no-repeat',
             backgroundColor: t =>
               t.palette.mode === 'light'
@@ -39,7 +40,7 @@ const SignIn = () => {
             backgroundPosition: 'center',
           }}
         />
-        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+        <Grid item xs={12} sm={8} md={7} component={Paper} elevation={6} square>
           <Box
             sx={{
               my: 8,

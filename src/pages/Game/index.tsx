@@ -12,7 +12,7 @@ const Game = () => {
     toggleViewList,
     handleViewCard,
     isOpenCard,
-    card,
+    cardNumber,
     closeCard,
   } = useGame()
 
@@ -24,7 +24,7 @@ const Game = () => {
         {viewedList ? (
           <MoveList />
         ) : isOpenCard ? (
-          <Card card={card} />
+          <Card cardNumber={cardNumber} />
         ) : (
           <Dice handleViewCard={handleViewCard} />
         )}

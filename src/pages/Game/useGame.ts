@@ -8,7 +8,7 @@ import { toast } from 'react-toastify';
 
 export const useGame = () => {
     const [viewedList, setViewedList] = useState(false)
-    const [card, setCard] = useState({} as CardType)
+    const [cardNumber, setCardNumber] = useState<number>(0)
     const allCards = useSelector((state: any) => state.cards)
     const [isOpenCard, setIsOpenCard] = useState<boolean>(false)
     const isLogged = useSelector((state: any) => state.isLogged)
@@ -19,7 +19,7 @@ export const useGame = () => {
     const handleViewCard = (card) => {
         allCards.map(item => {
             if((item.id + 1) === Number(card.cardNumber)) {
-                setCard(item)
+                setCardNumber(Number(card.cardNumber))
                 dispatch(addMove({
                     id: nanoid(),
                     fieldNumber: item.id + 1,
@@ -44,7 +44,7 @@ export const useGame = () => {
         viewedList,
         toggleViewList,
         handleViewCard,
-        card,
+        cardNumber,
         isOpenCard,
         closeCard
     }
