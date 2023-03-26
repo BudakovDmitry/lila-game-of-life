@@ -1,7 +1,7 @@
 import { MoveType } from 'src/types'
 
 const initialState = {
-    isLogged: false,
+    isLogged: true,
     users: [
       {
         email: 'test@gmail.com',
@@ -299,19 +299,76 @@ const initialState = {
         },
     ],
     allMoves: [] as MoveType[],
+    players: [
+      {
+        id: 0,
+        name: 'Test 1',
+        moveList: [] as MoveType[],
+        active: true
+      },
+      {
+        id: 1,
+        name: 'Test 2',
+        moveList: [] as MoveType[],
+        active: false
+      },
+      {
+        id: 2,
+        name: 'Test 3',
+        moveList: [] as MoveType[],
+        active: false
+      },
+      {
+        id: 3,
+        name: 'Test 4',
+        moveList: [] as MoveType[],
+        active: false
+      },
+    ]
   }
   
   const reducer = (state = initialState, action) => {
     switch (action.type) {
-      case 'ADD_MOVE':
-        return {
-          ...state,
-          allMoves: [...state.allMoves, action.payload],
-        }
+      // case 'ADD_MOVE':
+      //   return {
+      //     ...state,
+      //     allMoves: [...state.allMoves, action.payload],
+      //   }
       case 'LOGIN': 
         return {
           ...state,
           isLogged: action.payload
+        }
+      case 'UPDATE_ACTIVE_PLAYER': 
+        return {
+          ...state,
+          players: [...state.players.map(player => {
+            if (player.id === action.payload) {
+              return {
+                ...player,
+                active: true
+              }
+            }
+            return {
+              ...player,
+              active: false
+            }
+          })]
+        }
+      case 'ADD_MOVE': 
+        return {
+          ...state,
+          players: [...state.players.map(player => {
+            if (player.active) {
+              return {
+                ...player,
+                moveList: [...player.moveList, action.payload]
+              }
+            }
+            return {
+              ...player
+            }
+          })]
         }
       default:
         return state

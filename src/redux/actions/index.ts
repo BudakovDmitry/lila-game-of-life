@@ -11,3 +11,10 @@ export const login = value => {
     payload: value,
   }
 }
+
+export const updateActivePlayer = (playerId: number) => {
+  return {
+    type: 'UPDATE_ACTIVE_PLAYER',
+    payload: playerId,
+  }
+}

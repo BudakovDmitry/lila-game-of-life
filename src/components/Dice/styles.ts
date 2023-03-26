@@ -3,13 +3,13 @@ import styled from 'styled-components'
 export const DiceContainer = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
     width: 350px;
 `
 
 export const Card = styled.div`
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 30px;
     background: #e0e0e0;
     box-shadow: 15px 15px 30px #bebebe,
@@ -29,8 +29,8 @@ export const Number = styled.h2`
 
 export const Button = styled.button`
     position: relative;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);

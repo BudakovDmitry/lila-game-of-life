@@ -9,13 +9,13 @@ export const Form = styled.form<FormProps>`
 `
 
 export const Input = styled.input.attrs({ maxLength: '2' })<InputProps>`
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     margin: 0 auto;
     border: none;
     box-shadow: '0 5px 15px rgba(0, 0, 0, 0.1)';
     border-radius: 10px;
-    font-size: 46px;
+    font-size: 36px;
     padding: 10px;
     &::-webkit-inner-spin-button {
         -webkit-appearance: none;
@@ -29,8 +29,8 @@ export const Input = styled.input.attrs({ maxLength: '2' })<InputProps>`
 
 export const Button = styled.button`
 position: relative;
-width: 170px;
-height: 70px;
+width: 150px;
+height: 50px;
 background: rgba(71,49,134, 0.3);
 background: linear-gradient(90deg, rgba(71,49,134, 0.3) 0%, rgba(255,188,0, 0.3) 100%);
 backdrop-filter: blur(10px);

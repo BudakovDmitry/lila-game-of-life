@@ -5,6 +5,7 @@ import Field from 'src/components/Field'
 import MoveList from 'src/components/MoveList'
 import Chip from 'src/components/Chip'
 import Modal from 'src/components/Modal'
+import Players from 'src/components/Players'
 import { useGame } from 'src/pages/Game/useGame'
 
 const Game = () => {
@@ -21,6 +22,7 @@ const Game = () => {
     <Styled.AppContainer>
       <Field />
       <Styled.RightField>
+        <Players />
         <Chip />
         {viewedList ? (
           <MoveList />

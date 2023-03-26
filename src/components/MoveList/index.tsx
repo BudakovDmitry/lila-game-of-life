@@ -4,15 +4,15 @@ import { useMoveList } from 'src/components/MoveList/useMoveList'
 import { MoveType } from 'src/types'
 
 const MoveList = () => {
-  const { allMoves } = useMoveList()
+  const { moves } = useMoveList()
 
   return (
     <Styled.MoveList>
-      {allMoves.length ? (
+      {moves.length ? (
         <>
           <Styled.ListTitle>Шлях</Styled.ListTitle>
           <Styled.ListContainer>
-            {allMoves.map((move: MoveType) => {
+            {moves.map((move: MoveType) => {
               return (
                 <MoveListItem
                   key={move.id}

@@ -3,7 +3,7 @@ import { AllMovesButtonProps, CloseCardButtonProps } from 'src/pages/Game/types'
 
 export const AppContainer = styled.div`
     display: flex;
-    align-items: center;
+    align-items: start;
     gap: 20px;
     position: relative;
 `
@@ -11,7 +11,8 @@ export const AppContainer = styled.div`
 export const RightField = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    align-items: center;
+    gap: 10px;
     min-width: 300px;
     margin: 0 auto;
 `

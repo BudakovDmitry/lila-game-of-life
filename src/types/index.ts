@@ -8,3 +8,10 @@ export type MoveType = {
     fieldNumber: number
     fieldName: string
 }
+
+export type PlayerType = {
+    id: number
+    name: string
+    moveList: MoveType[]
+    active: boolean
+}
