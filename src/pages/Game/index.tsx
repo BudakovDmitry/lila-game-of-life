@@ -10,10 +10,10 @@ import { useGame } from 'src/pages/Game/useGame'
 import { PlayerType } from 'src/types'
 
 const colors = {
-  0: 'yellow',
-  1: 'blue',
-  2: 'red',
-  3: 'green',
+  1: 'yellow',
+  2: 'blue',
+  3: 'red',
+  4: 'green',
 }
 
 const Game = () => {
@@ -37,7 +37,7 @@ const Game = () => {
             <Chip
               key={player.id}
               color={colors[player.id]}
-              bottom={100 + player.id * 70}
+              bottom={30 + player.id * 70}
             />
           )
         })}

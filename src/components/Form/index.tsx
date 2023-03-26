@@ -1,6 +1,5 @@
 import * as Styled from 'src/components/Form/styles'
 import { SubmitHandler, FieldValues, useForm } from 'react-hook-form'
-import { ReactNode } from 'react'
 
 type FormTypeProps = {
   viewed: boolean
@@ -28,11 +27,6 @@ const Form = ({ viewed, handleViewCard }: FormTypeProps) => {
         })}
         error={errors.cardNumber}
       />
-      {/* {errors.cardNumber && (
-        <Styled.ErrorText>
-          {errors.cardNumber.message as ReactNode}
-        </Styled.ErrorText>
-      )} */}
       <Styled.Button>Відкрити карту</Styled.Button>
     </Styled.Form>
   )

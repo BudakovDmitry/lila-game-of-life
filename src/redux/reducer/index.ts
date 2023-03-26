@@ -1,4 +1,4 @@
-import { MoveType } from 'src/types'
+import { MoveType, PlayerType } from 'src/types'
 
 const initialState = {
     isLogged: true,
@@ -300,40 +300,40 @@ const initialState = {
     ],
     allMoves: [] as MoveType[],
     players: [
-      {
-        id: 0,
-        name: 'Test 1',
-        moveList: [] as MoveType[],
-        active: true
-      },
-      {
-        id: 1,
-        name: 'Test 2',
-        moveList: [] as MoveType[],
-        active: false
-      },
-      {
-        id: 2,
-        name: 'Test 3',
-        moveList: [] as MoveType[],
-        active: false
-      },
-      {
-        id: 3,
-        name: 'Test 4',
-        moveList: [] as MoveType[],
-        active: false
-      },
-    ]
+      // {
+      //   id: 0,
+      //   name: 'Test 1',
+      //   moveList: [] as MoveType[],
+      //   active: true
+      // },
+      // {
+      //   id: 1,
+      //   name: 'Test 2',
+      //   moveList: [] as MoveType[],
+      //   active: false
+      // },
+      // {
+      //   id: 2,
+      //   name: 'Test 3',
+      //   moveList: [] as MoveType[],
+      //   active: false
+      // },
+      // {
+      //   id: 3,
+      //   name: 'Test 4',
+      //   moveList: [] as MoveType[],
+      //   active: false
+      // },
+    ] as PlayerType[]
   }
   
   const reducer = (state = initialState, action) => {
     switch (action.type) {
-      // case 'ADD_MOVE':
-      //   return {
-      //     ...state,
-      //     allMoves: [...state.allMoves, action.payload],
-      //   }
+      case 'ADD_PLAYERS': 
+      return {
+        ...state,
+        players: action.payload
+      }
       case 'LOGIN': 
         return {
           ...state,

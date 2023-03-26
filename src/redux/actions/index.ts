@@ -1,3 +1,10 @@
+export const addPlayers = players => {
+  return {
+    type: 'ADD_PLAYERS',
+    payload: players,
+  }
+}
+
 export const addMove = move => {
     return {
       type: 'ADD_MOVE',
