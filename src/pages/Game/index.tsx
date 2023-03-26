@@ -4,6 +4,7 @@ import Card from 'src/components/Card'
 import Field from 'src/components/Field'
 import MoveList from 'src/components/MoveList'
 import Chip from 'src/components/Chip'
+import Modal from 'src/components/Modal'
 import { useGame } from 'src/pages/Game/useGame'
 
 const Game = () => {
@@ -40,6 +41,7 @@ const Game = () => {
           </Styled.Button>
         </Styled.ContainerButtons>
       </Styled.RightField>
+      <Modal />
     </Styled.AppContainer>
   )
 }

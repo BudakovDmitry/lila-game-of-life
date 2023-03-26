@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux'
 import { usePage } from "src/hooks/usePage"
 import { addMove } from 'src/redux/actions'
 import { nanoid } from 'nanoid'
-import { CardType } from "src/types"
 import { toast } from 'react-toastify';
 
 export const useGame = () => {
@@ -13,6 +12,7 @@ export const useGame = () => {
     const [isOpenCard, setIsOpenCard] = useState<boolean>(false)
     const isLogged = useSelector((state: any) => state.isLogged)
     const { dispatch, navigate } = usePage()
+
 
     const toggleViewList = () => setViewedList(prev => !prev)
 
