@@ -7,6 +7,14 @@ import Chip from 'src/components/Chip'
 import Modal from 'src/components/Modal'
 import Players from 'src/components/Players'
 import { useGame } from 'src/pages/Game/useGame'
+import { PlayerType } from 'src/types'
+
+const colors = {
+  0: 'yellow',
+  1: 'blue',
+  2: 'red',
+  3: 'green',
+}
 
 const Game = () => {
   const {
@@ -16,6 +24,7 @@ const Game = () => {
     isOpenCard,
     cardNumber,
     closeCard,
+    allPlayers,
   } = useGame()
 
   return (
@@ -23,7 +32,15 @@ const Game = () => {
       <Field />
       <Styled.RightField>
         <Players />
-        <Chip />
+        {allPlayers.map((player: PlayerType) => {
+          return (
+            <Chip
+              key={player.id}
+              color={colors[player.id]}
+              bottom={100 + player.id * 70}
+            />
+          )
+        })}
         {viewedList ? (
           <MoveList />
         ) : isOpenCard ? (

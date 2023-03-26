@@ -12,7 +12,7 @@ export const useGame = () => {
     const [isOpenCard, setIsOpenCard] = useState<boolean>(false)
     const isLogged = useSelector((state: any) => state.isLogged)
     const { dispatch, navigate } = usePage()
-
+    const allPlayers = useSelector((state: any) => state.players)
 
     const toggleViewList = () => setViewedList(prev => !prev)
 
@@ -46,6 +46,7 @@ export const useGame = () => {
         handleViewCard,
         cardNumber,
         isOpenCard,
-        closeCard
+        closeCard,
+        allPlayers
     }
 }
