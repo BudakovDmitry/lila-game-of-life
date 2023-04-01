@@ -59,13 +59,13 @@ const Game = () => {
             isShow={isOpenCard && !viewedList}
             onClick={closeCard}
           >
-            Закрити
+            Закрыть
           </Styled.ButtonCloseCard>
           <Styled.ButtonCard onClick={openForm}>
             Дополнительная карта
           </Styled.ButtonCard>
           <Styled.Button viewedList={viewedList} onClick={toggleViewList}>
-            Шлях
+            Путь
           </Styled.Button>
         </Styled.ContainerButtons>
       </Styled.RightField>

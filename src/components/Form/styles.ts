@@ -41,7 +41,7 @@ transform: 0.5s;
 color: #fff;
 text-align: center;
 border: none;
-font-size: 20px;
+font-size: 16px;
 cursor: pointer;
 margin: 0 auto;
 &::before {

@@ -54,7 +54,7 @@ const SignIn = () => {
               <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
-              Sign in
+              Вход
             </Typography>
             <Box
               component="form"
@@ -82,17 +82,13 @@ const SignIn = () => {
                 id="password"
                 autoComplete="current-password"
               />
-              {/* <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Remember me"
-              /> */}
               <Button
                 type="submit"
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
               >
-                Sign In
+                Войти
               </Button>
               <Copyright sx={{ mt: 5 }} />
             </Box>

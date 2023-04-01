@@ -39,10 +39,10 @@ const Modal = () => {
     >
       <DialogContent sx={{ padding: '30px 100px', marginBottom: 1 }}>
         <DialogContentText sx={{ marginBottom: 3, fontWeight: 'bold' }}>
-          Виберіть кількість гравців
+          Выберите количество игроков
         </DialogContentText>
         <FormControl fullWidth error={errorSelect}>
-          <InputLabel id="demo-simple-select-label">Гравців</InputLabel>
+          <InputLabel id="demo-simple-select-label">Игроков</InputLabel>
           <Select
             labelId="demo-simple-select-label"
             id="demo-simple-select"
@@ -63,23 +63,23 @@ const Modal = () => {
             }}
           >
             <Typography variant="subtitle1" component="p">
-              Напишіть ім'я гравців
+              Напишите имена игроков
             </Typography>
             <Styled.Form onSubmit={handleSubmit(getPlayers)}>
               {getPlayersArrayNumber().map((player: number) => {
                 return (
                   <Styled.Input
                     key={player}
-                    placeholder={`Гравець ${player}`}
+                    placeholder={`Игрок ${player}`}
                     type="string"
                     {...register(`${player}`, {
-                      required: "Це поле обов'язково до заповнення",
+                      required: "Это поле обязательно для заполнения",
                     })}
                     error={errors.cardNumber}
                   />
                 )
               })}
-              <Button type="submit">Підтвердити</Button>
+              <Button type="submit">Подтвердить</Button>
             </Styled.Form>
           </Stack>
         </FormControl>

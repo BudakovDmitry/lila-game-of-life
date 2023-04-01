@@ -10,7 +10,7 @@ const MoveList = () => {
     <Styled.MoveList>
       {moves.length ? (
         <>
-          <Styled.ListTitle>Шлях</Styled.ListTitle>
+          <Styled.ListTitle>Путь</Styled.ListTitle>
           <Styled.ListContainer>
             {moves.map((move: MoveType) => {
               return (
@@ -25,7 +25,7 @@ const MoveList = () => {
         </>
       ) : (
         <Styled.HelpText>
-          Вибачте, але ви ще не почали свій шлях
+          Извините, но вы еще не начали свой путь!
         </Styled.HelpText>
       )}
     </Styled.MoveList>

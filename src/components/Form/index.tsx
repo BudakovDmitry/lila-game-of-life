@@ -21,13 +21,13 @@ const Form = ({ viewed, handleViewCard }: FormTypeProps) => {
       <Styled.Input
         type="number"
         {...register('cardNumber', {
-          required: "Це поле обов'язково до заповнення",
-          min: { value: 1, message: 'Мінімально 1' },
+          required: "Это поле обязательно для заполнения",
+          min: { value: 1, message: 'Минимально 1' },
           max: { value: 72, message: 'Максимально 72' },
         })}
         error={errors.cardNumber}
       />
-      <Styled.Button>Відкрити карту</Styled.Button>
+      <Styled.Button>Открыть карту</Styled.Button>
     </Styled.Form>
   )
 }

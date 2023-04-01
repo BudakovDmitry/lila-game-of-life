@@ -40,7 +40,7 @@ export const Button = styled.button`
     color: #000000;
     text-align: center;
     border: none;
-    font-size: 18px;
+    font-size: 14px;
     cursor: pointer;
     margin: 0 auto;
     &:hover {
