@@ -6,6 +6,10 @@ const initialState = {
       {
         email: 'test@gmail.com',
         password: 'spalding'
+      },
+      {
+        email: 'allaniko777ok@gmail.com',
+        password: 'alla123654'
       }
     ],
     cards: [
