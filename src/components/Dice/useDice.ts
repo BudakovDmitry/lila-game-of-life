@@ -2,12 +2,11 @@ import { useState } from "react"
 import { getRandomNumber } from 'src/helpers'
 
 type UseDiceProps = {
-    setViewedForm: (value: boolean) => void
+    setViewedForm: () => void
 }
 
 export const useDice = ({ setViewedForm }: UseDiceProps) => {
     const [diceNumber, setDiceNumber] = useState<number | null>(null)
-    // const [viewedForm, setViewedForm] = useState<boolean>(false)
 
     const getNumber = () => {
         diceNumber && setDiceNumber(null)
@@ -18,12 +17,11 @@ export const useDice = ({ setViewedForm }: UseDiceProps) => {
     }
 
     const getForm = () => {
-        setViewedForm(true)
+        setViewedForm()
     }
 
     return {
         diceNumber,
-        getNumber,
-        // viewedForm
+        getNumber
     }
 }
