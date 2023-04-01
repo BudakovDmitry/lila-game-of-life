@@ -50,6 +50,8 @@ export const useGame = () => {
             navigate('/');
             toast.error('Потрібно залогінитись!')
         }
+
+        window.onbeforeunload = () => true;
     }, [])
 
     return {
