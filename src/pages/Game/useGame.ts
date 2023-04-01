@@ -48,7 +48,7 @@ export const useGame = () => {
     useEffect(() => {
         if (!isLogged) {
             navigate('/');
-            toast.error('Потрібно залогінитись!')
+            toast.error('Нужно войти!')
         }
 
         window.onbeforeunload = () => true;

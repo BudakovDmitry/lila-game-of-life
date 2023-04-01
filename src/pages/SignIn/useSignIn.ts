@@ -19,11 +19,11 @@ export const useSignIn = () => {
       const user = users.find((user) => user.email === data.get('email'))
 
       if (!user) {
-        toast.error('Упс. Невірні данні')
+        toast.error('Упс. Неправильные данные')
       }
 
       if (user && user.password !== data.get('password')) {
-        toast.error('Пароль невірний')
+        toast.error('Пароль неправильный')
       }
 
 
