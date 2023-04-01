@@ -81,10 +81,10 @@ export const CloseCardButton = styled.button`
 
 
 export const CardContainer = styled.div`
-    max-width: 300px;
+    max-width: 280px;
 `
 
 export const Card = styled.img`
-    max-width: 300px;
+    max-width: 280px;
     box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.75);
 `

@@ -19,7 +19,7 @@ export const RightField = styled.div`
 
 export const ContainerButtons = styled.div`
     display: flex;
-    gap: 20px;
+    gap: 15px;
     position: absolute;
     bottom: 20px;
     right: 20px;
@@ -27,8 +27,8 @@ export const ContainerButtons = styled.div`
 
 export const ButtonCloseCard = styled.button<CloseCardButtonProps>`
     display: ${props => props.isShow ? 'block' : 'none'};
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background: #e89595;
     box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
     border-radius: 18px;
@@ -42,8 +42,8 @@ export const ButtonCloseCard = styled.button<CloseCardButtonProps>`
 `
 
 export const Button = styled.button<AllMovesButtonProps>`
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     box-shadow: ${props => props.viewedList ? '15px 15px 30px #bebebe, -15px -15px 30px #ffffff, inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;' : '15px 15px 30px #bebebe, -15px -15px 30px #ffffff'};
@@ -57,8 +57,8 @@ export const Button = styled.button<AllMovesButtonProps>`
     cursor: pointer;
 `
 export const ButtonCard = styled.button`
-    width: 120px;
-    height: 60px;
+    width: 110px;
+    height: 50px;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
