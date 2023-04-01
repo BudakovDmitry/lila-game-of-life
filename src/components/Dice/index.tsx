@@ -3,8 +3,14 @@ import * as Styled from 'src/components/Dice/styles'
 import Loader from 'src/components/Loader'
 import Form from 'src/components/Form'
 
-const Dice = ({ handleViewCard }) => {
-  const { diceNumber, getNumber, viewedForm } = useDice()
+type DiceProps = {
+  handleViewCard: (card: any) => void
+  viewedForm: boolean
+  setViewedForm: () => void
+}
+
+const Dice = ({ handleViewCard, viewedForm, setViewedForm }: DiceProps) => {
+  const { diceNumber, getNumber } = useDice({ setViewedForm })
 
   return (
     <Styled.DiceContainer>

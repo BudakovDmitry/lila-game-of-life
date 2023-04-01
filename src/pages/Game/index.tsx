@@ -25,6 +25,8 @@ const Game = () => {
     cardNumber,
     closeCard,
     allPlayers,
+    viewedForm,
+    openForm,
   } = useGame()
 
   return (
@@ -46,7 +48,11 @@ const Game = () => {
         ) : isOpenCard ? (
           <Card cardNumber={cardNumber} />
         ) : (
-          <Dice handleViewCard={handleViewCard} />
+          <Dice
+            handleViewCard={handleViewCard}
+            viewedForm={viewedForm}
+            setViewedForm={openForm}
+          />
         )}
         <Styled.ContainerButtons>
           <Styled.ButtonCloseCard
@@ -55,6 +61,9 @@ const Game = () => {
           >
             Закрити
           </Styled.ButtonCloseCard>
+          <Styled.ButtonCard onClick={openForm}>
+            Дополнительная карта
+          </Styled.ButtonCard>
           <Styled.Button viewedList={viewedList} onClick={toggleViewList}>
             Шлях
           </Styled.Button>

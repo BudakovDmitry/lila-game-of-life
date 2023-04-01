@@ -56,3 +56,18 @@ export const Button = styled.button<AllMovesButtonProps>`
     font-size: 12px;
     cursor: pointer;
 `
+export const ButtonCard = styled.button`
+    width: 120px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+    border: none;
+    border-radius: 18px;
+    z-index: 1;
+    transform: 0.5s;
+    color: #000000;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+`

@@ -13,6 +13,7 @@ export const useGame = () => {
     const isLogged = useSelector((state: any) => state.isLogged)
     const { dispatch, navigate } = usePage()
     const allPlayers = useSelector((state: any) => state.players)
+    const [viewedForm, setViewedForm] = useState<boolean>(false)
 
     const toggleViewList = () => setViewedList(prev => !prev)
 
@@ -31,7 +32,18 @@ export const useGame = () => {
         setIsOpenCard(true)
     }
 
-    const closeCard = () => setIsOpenCard(false);
+    const openForm = () => {
+        setViewedForm(true)
+    }
+
+    const closeForm = () => {
+        setViewedForm(false)
+    }
+
+    const closeCard = () => {
+        closeForm();
+        setIsOpenCard(false);
+    }
 
     useEffect(() => {
         if (!isLogged) {
@@ -47,6 +59,9 @@ export const useGame = () => {
         cardNumber,
         isOpenCard,
         closeCard,
-        allPlayers
+        allPlayers,
+        viewedForm,
+        setViewedForm,
+        openForm
     }
 }
